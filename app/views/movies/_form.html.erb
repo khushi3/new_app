@@ -1,7 +1,7 @@
 <%# Conditionally set remote: true. Also, passing model name as data attribute %>
 <% modal ||= false %>
 <% remote = modal ? true : false %>
-<%= form_for(@movie, remote: remote, html: {role: :form, 'data-model' => 'movie'}) do |f| %>
+<%= form_for(@movie, remote: remote, html: {role: :form, 'data-model' => 'movie', id: 'formid'} ,) do |f| %>
 
     <% if @movie.errors.any? %>
         <div id="error_explanation">

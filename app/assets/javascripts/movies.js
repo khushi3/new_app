@@ -37,7 +37,7 @@ $(document).ready(function () {
 
   $.fn.modal_success = function(){
     // close modal
-    this.modal('hide');
+    $("#formid").hide();
 
     // clear form input elements
     // todo/note: handle textarea, select, etc

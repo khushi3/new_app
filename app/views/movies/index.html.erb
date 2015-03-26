@@ -4,7 +4,7 @@
   Add new movie
 </button>
 
-<!-- Modal -->
+<!--Modal -->
 <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -21,28 +21,28 @@
       </div>
     </div>
   </div>
-</div> --> -->
+</div> --> 
 <table class='table' id='movies_table'>
   <thead>
-  <tr>
-    <th>Title</th>
-    <th>Realese year</th>
-    <th>Lead Role</th>
-    <th>Director</th>
-    <th>Rating</th>
-  </tr>
+    <tr>
+      <th>Title</th>
+      <th>Realese year</th>
+      <th>Lead Role</th>
+      <th>Director</th>
+      <th>Rating</th>
+    </tr>
   </thead>
 
 
   <tbody id="sortable">
-  <% @movies.each do |movie| %>
-   
-          <%= render partial: 'table_row', locals: {movie: movie} %>
+    <% @movies.each do |movie| %>
+
+    <%= render partial: 'table_row', locals: {movie: movie} %>
     <% end %>
-     </tbody>
+  </tbody>
 </table>
 
-<br>
+<!-- <br> -->
 <%= link_to 'New Movie', '#new_movie_modal', 'data-toggle' => 'modal' %>
 <div class="modal fade" id="new_movie_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -52,7 +52,7 @@
         <h4 class="modal-title" id="myModalLabel">Create new movie</h4>
       </div>
       <div class="modal-body">
-        <%# Render the new person form (passing modal => true to enable remote => true) %>
+     
         <%= render 'form', modal: true %>
       </div>
       <div class="modal-footer">
