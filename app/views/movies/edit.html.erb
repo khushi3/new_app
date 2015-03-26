@@ -1,0 +1,27 @@
+<%= form_for @movie do |f| %>
+    <p>
+      <%= f.label :title %><br>
+      <%= f.text_field :name %>
+    </p>
+    <p>
+      <%= f.label :realese, "Release Date" %><br>
+      <%= f.text_field :realese %>
+
+    </p>
+
+    <p>
+      <%= f.label :Actor %><br>
+      <%=f.text_field :actor %>
+    </p>
+    <p>
+      <%= f.label :"Trailer Date" %><br>
+      <%=f.text_field :trailerdate %>
+    </p>
+    <p>
+      <%= f.label :Director %><br>
+      <%=f.text_field :director %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>
